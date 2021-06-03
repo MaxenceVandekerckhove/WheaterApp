@@ -4,7 +4,7 @@
         </Navbar>
 
         <ion-content v-if="cities.length>0">
-            <BookmarkedElement v-for="(city,index) in cities" :key="index" :city="city.name" :tempMorning="'20'" :tempAfternoon="'20'">
+            <BookmarkedElement v-for="(city,index) in cities" :key="index" :city="city.name" :tempAfternoon="city.currentWeather.list[0].main.temp">
             </BookmarkedElement>
         </ion-content>
 
