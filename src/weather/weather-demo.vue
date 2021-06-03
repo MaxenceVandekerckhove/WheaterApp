@@ -1,12 +1,9 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-    </ion-header>
-    
-    <ion-content :fullscreen="true">
-        
-        <ion-searchbar></ion-searchbar>
-
+  <div>
+      <current-weather></current-weather>
+      <forecast></forecast>
+  </div>
+  <div>
         <IonTabs>
           <IonTabBar>
             <IonTabButton tab="schedule" href="/search">
@@ -26,30 +23,31 @@
 
           </IonTabBar>
         </IonTabs>
-
-        
-    </ion-content>
-  </ion-page>
+  </div>
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonSearchbar, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
+import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, } from '@ionic/vue';
+import CurrentWeather from './current-weather.vue';
+import Forecast from './forecast.vue';
 
 export default defineComponent({
-  name: 'Home',
-  components: {
-    IonContent,
-    IonHeader,
-    IonPage,
-    IonSearchbar,
-    IonTabs, 
-    IonTabBar, 
-    IonTabButton,
-    IonIcon, 
-    IonLabel,
-  }
-});
+    name:'weather',
+    components: {
+        CurrentWeather,
+        Forecast,
+        IonTabs, 
+        IonTabBar, 
+        IonTabButton,
+        IonIcon, 
+        IonLabel,
+    },
+    setup () {
+    
+        return {}
+    }
+})
 </script>
 
 <style scoped>
