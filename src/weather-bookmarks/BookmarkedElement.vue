@@ -7,7 +7,7 @@
                         <p>{{ city }}</p>
                     </ion-col>
                     <ion-col>
-                        <p>{{ tempMorning }}</p>
+                        <p>Temperature</p>
                         <p>{{ tempAfternoon }}</p>
                     </ion-col>
                     <ion-col>
